@@ -1,12 +1,12 @@
 ﻿Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+long number = Convert.ToInt64(Console.ReadLine());
 int numberOfDigits = number.ToString().Length;
 
 string s = number.ToString();
 char[] ar = s.ToCharArray();
 Array.Reverse(ar);
 s = new String(ar);
-number = Convert.ToInt32(s);
+number = Convert.ToInt64(s);
 
 char[,] CreateOutputArray(int numberOfDigits)
 {
@@ -39,9 +39,9 @@ char[,] NumberArray(char[,] array)
     return array;
 }
 
-char[,] FillingArray(int numberOfDigits, int number, char[,] outputArray, char[,] zero, char[,] one, char[,] two, char[,] three, char[,] four, char[,] five, char[,] six, char[,] seven, char[,] eight, char[,] nine)
+char[,] FillingArray(int numberOfDigits, long number, char[,] outputArray, char[,] zero, char[,] one, char[,] two, char[,] three, char[,] four, char[,] five, char[,] six, char[,] seven, char[,] eight, char[,] nine)
 {
-    int tempNumber = 0;
+    long tempNumber = 0;
     int count = 1;
     int temp = 0;
     while (count <= numberOfDigits)
