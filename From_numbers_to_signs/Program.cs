@@ -25,4 +25,5 @@ void PrintArray(char[,] array)
     }
 }
 
+
 PrintArray(outputArray);
