@@ -1,4 +1,4 @@
-﻿Console.Write("Введите число: ");
+﻿Console.Write("\nВведите число: ");
 long number = Convert.ToInt64(Console.ReadLine());
 int numberOfDigits = number.ToString().Length;
 
@@ -79,7 +79,8 @@ char[,] FillingArray(int numberOfDigits, long number, char[,] outputArray, char[
 
 char[,] outputArray = CreateOutputArray(numberOfDigits);
 
-char symbol = '@';
+Console.Write("Введите символ: ");
+char symbol = (char)Console.Read();
 
 char[,] zero = new char[5, 6];
 zero = NumberArray(zero);
@@ -145,4 +146,6 @@ nine[2, 3] = symbol; nine[2, 4] = symbol; nine[3, 4] = symbol; nine[4, 1] = symb
 nine[4, 2] = symbol; nine[4, 3] = symbol; nine[4, 4] = symbol;
 
 outputArray = FillingArray(numberOfDigits, number, outputArray, zero, one, two, three, four, five, six, seven, eight, nine);
+Console.WriteLine();
 PrintArray(outputArray);
+Console.WriteLine();
